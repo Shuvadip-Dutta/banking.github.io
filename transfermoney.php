@@ -20,15 +20,7 @@
 </head>
 
 <body style="background-color : #82E0AA;"> 
-<!-- <?php
-    include 'config.php';
-    $sql = "SELECT * FROM users";
-    $result = mysqli_query($conn,$sql);
-?>
 
-<?php
-  include 'navbar.php';
-?> -->
 
 <div class="container">
         <h2 class="text-center pt-4" style="color : black;">Transfer Money</h2>
