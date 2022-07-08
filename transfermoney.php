@@ -19,7 +19,7 @@
     </style>
 </head>
 
-<body style="background-color : #82E0AA;"> 
+<body style="background-color : #BDC3C7;">
 <?php
     include 'config.php';
     $sql = "SELECT * FROM users";
@@ -55,7 +55,7 @@
                         <td class="py-2"><?php echo $rows['name']?></td>
                         <td class="py-2"><?php echo $rows['email']?></td>
                         <td class="py-2"><?php echo $rows['balance']?></td>
-                        <td><a href="selecteduserdetail.php?id= <?php echo $rows['id'] ;?>"> <button type="button" class="btn" style="background-color : #A569BD;">Transact</button></a></td> 
+                        <td><a href="selecteduserdetail.php?id= <?php echo $rows['id'] ;?>"> <button type="button" class="btn" style="background-color : #338E33; color: white;">Send</button></a></td> 
                     </tr>
                 <?php
                     }
@@ -68,7 +68,7 @@
             </div> 
          </div>
          <footer class="text-center mt-5 py-2">
-            <p>&copy 2021. Made by <b>JYOTI</b> <br> THE SPARKS FOUNDATION PROJECT</p>
+            <p>&copy 2021. Made by <b>ABHAYKUMAR PARSANIYA</b></p>
         </footer>
          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 

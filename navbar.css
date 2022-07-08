@@ -14,3 +14,11 @@ h2{
 	letter-spacing: 0.5px;
 	font-family: raleway;
 }
+.navbar{
+	background-color: #293FA9 !important;
+}
+
+#logo{
+	height: 35px;
+	width: 35px;
+}

@@ -32,8 +32,8 @@ button:hover{
 	background-color:#4C4B4B;
 }
 footer{
-	color:#586776;
-	background-color:#EAF0F1;
+	color:white !important;
+	background-color: black !important;
 	letter-spacing: 0.5px;
 }
 footer p{
