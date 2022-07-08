@@ -66,8 +66,8 @@ if(isset($_POST['submit']))
                 $query=mysqli_query($conn,$sql);
 
                 if($query){
-                     echo "<script> alert('Hurray! Transaction is Successful');
-                                     window.location='transactions.php';
+                     echo "<script> alert('Transaction Successful');
+                                     window.location='transactionhistory.php';
                            </script>";
                     
                 }
@@ -82,44 +82,14 @@ if(isset($_POST['submit']))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Navigation bar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Zombie Bank [¬º-°]¬  </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="customers.php">Our Customers</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="https://www.xe.com/currencyconverter/convert/?Amount=20&From=INR&To=EUR">Currency Convertor </a>
-        </li>
-        
-</div>
-
-
-      </ul>
-      
-    </div>
-  </div>
-</nav>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Money Transfer</title>
+    <title>Transaction</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/table.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
 
     <style type="text/css">
-
-
     	
 		button{
 			border:none;
@@ -134,11 +104,14 @@ if(isset($_POST['submit']))
     </style>
 </head>
 
-<body style="background-color : #00008B ;">
+<body style="background-color : #E59866 ;">
  
+<?php
+  include 'navbar.php';
+?>
 
 	<div class="container">
-        <h2 class="text-center pt-4" style="color : white;">Easy Money Transfer</h2>
+        <h2 class="text-center pt-4" style="color : black;">Transaction</h2>
             <?php
                 include 'config.php';
                 $sid=$_GET['id'];
@@ -153,13 +126,13 @@ if(isset($_POST['submit']))
             <form method="post" name="tcredit" class="tabletext" ><br>
         <div>
             <table class="table table-striped table-condensed table-bordered">
-                <tr style="color : white;">
-                    <th class="text-center">Account No.</th>
-                    <th class="text-center">Account Name</th>
-                    <th class="text-center">E-mail</th>
-                    <th class="text-center">Account Balane(in Rs.)</th>
+                <tr style="color : black;">
+                    <th class="text-center">Id</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center">Balance</th>
                 </tr>
-                <tr style="color : white;">
+                <tr style="color : black;">
                     <td class="py-2"><?php echo $rows['id'] ?></td>
                     <td class="py-2"><?php echo $rows['name'] ?></td>
                     <td class="py-2"><?php echo $rows['email'] ?></td>
@@ -168,9 +141,9 @@ if(isset($_POST['submit']))
             </table>
         </div>
         <br><br><br>
-        <label style="color : white;"><b>Transfer To:</b></label>
+        <label style="color : black;"><b>Transfer To:</b></label>
         <select name="to" class="form-control" required>
-            <option value="" disabled selected>Choose account</option>
+            <option value="" disabled selected>Choose</option>
             <?php
                 include 'config.php';
                 $sid=$_GET['id'];
@@ -195,16 +168,16 @@ if(isset($_POST['submit']))
         </select>
         <br>
         <br>
-            <label style="color : white;"><b>Amount:</b></label>
+            <label style="color : black;"><b>Amount:</b></label>
             <input type="number" class="form-control" name="amount" required>   
             <br><br>
                 <div class="text-center" >
-            <button class="btn mt-3" name="submit" type="submit" id="myBtn" >Transfer Money</button>
+            <button class="btn mt-3" name="submit" type="submit" id="myBtn" >Transfer</button>
             </div>
         </form>
     </div>
     <footer class="text-center mt-5 py-2">
-            <p>&copy 2021 <b>Kaul Saneet</b> <br> Zombie Foundation</p>
+            <p>&copy 2021. Made by <b>JYOTI</b> <br> THE SPARKS FOUNDATION PROJECT</p>
     </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
